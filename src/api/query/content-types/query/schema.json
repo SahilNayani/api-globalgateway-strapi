@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "queries",
+  "info": {
+    "singularName": "query",
+    "pluralName": "queries",
+    "displayName": "Query",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "getInTouch": {
+      "type": "boolean",
+      "default": false
+    },
+    "preferredCountry": {
+      "type": "json"
+    },
+    "purposeVisit": {
+      "type": "string"
+    },
+    "preferredIntake": {
+      "type": "string"
+    },
+    "preferredProgram": {
+      "type": "string"
+    },
+    "highestLevelEducation": {
+      "type": "string"
+    },
+    "highestEducationPassoutYear": {
+      "type": "string"
+    },
+    "englishTest": {
+      "type": "string"
+    },
+    "englishTestGrades": {
+      "type": "decimal",
+      "max": 9,
+      "min": 0
+    },
+    "admitStatus": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^[6789]\\d{9}$"
+    },
+    "message": {
+      "type": "text"
+    },
+    "grades": {
+      "max": 99,
+      "type": "decimal",
+      "min": 0
+    },
+    "passportStatus": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "applied",
+        "no",
+        "need_assistance"
+      ]
+    },
+    "connected": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
